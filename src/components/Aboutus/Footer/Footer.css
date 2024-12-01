@@ -1,0 +1,43 @@
+.footer {
+  background-color: #0d47a1; /* Dark Blue */
+  color: #ffffff;
+}
+
+.footer h5 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+.text-muted {
+  opacity: 0.8;
+}
+
+.footer .text-uppercase {
+  text-transform: uppercase;
+}
+
+/* Align all columns and content at the center */
+.text-center {
+  text-align: center;
+}
+
+.row.justify-content-center {
+  justify-content: center !important;
+}

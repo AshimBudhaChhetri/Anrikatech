@@ -1,0 +1,93 @@
+/* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.hero-section {
+  padding: 2rem 0;
+  background-color: #f9f9f9; /* Fallback color in case the image doesn't load */
+  background-image: url("../../media/pic2.png"); /* Replace with your background image path */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
+}
+
+/* Left Section */
+.subtext {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #b8860b; /* Golden-brown color */
+  margin-bottom: 0.5rem;
+  font-size: 22px;
+}
+
+.main-heading-hero {
+  font-size: 3.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.points-hero {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.points-hero li {
+  font-size: 19px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 0.2rem; /* Adjust spacing */
+  display: flex;
+  align-items: center; /* Align bullet and text */
+}
+
+.bullet {
+  font-size: 1.5rem; /* Bigger bullet size */
+  color: #b8860b; /* Golden-brown color */
+  margin-right: 0.8rem; /* Spacing between bullet and text */
+}
+
+.learn-more-btn-hero {
+  background: linear-gradient(135deg, #b8860b, #e3a617);
+  border: none;
+  color: white;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.learn-more-btn-hero:hover {
+  background: linear-gradient(135deg, #e3a617, #f0c12b);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Right Section */
+.hero-image {
+  width: 100%;
+  max-width: 500px; /* Adjust the size of the main hero image */
+}
+
+.hero-mov-image {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 650px; /* Size of the moving image */
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -15px);
+  }
+}

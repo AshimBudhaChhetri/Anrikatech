@@ -1,0 +1,79 @@
+/* Section Styles */
+.about-us-section {
+  padding: 4rem 0;
+  background-color: #fef8f8; /* Light pink background */
+}
+
+/* Section Title (About Us Text) */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #b8860b; /* Golden-brown color */
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Right Side: Content */
+.main-heading-about {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.points-about {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.points-about li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.bullet {
+  font-size: 1.5rem;
+  color: #ff5e90; /* Pink color for bullets */
+  margin-right: 0.8rem;
+}
+
+/* Button */
+.learn-more-btn-about {
+  background: linear-gradient(135deg, #b8860b, #e3a617);
+  border: none;
+  color: white;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 12px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.learn-more-btn-about:hover {
+  background: linear-gradient(135deg, #fbb03b, #ff7a59);
+  box-shadow: 0 6px 15px rgba(255, 90, 90, 0.3);
+}
+
+.about-image {
+  border-radius: 20px;
+}
+
+.left-box {
+}
+
+.about-image {
+  height: 450px;
+  width: 800px;
+}

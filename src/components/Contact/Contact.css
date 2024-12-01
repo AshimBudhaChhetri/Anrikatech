@@ -1,0 +1,84 @@
+/* General Styling */
+
+.contact-container {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fafb;
+}
+
+.sub-text-contact {
+  color: #b8860b;
+}
+
+h1 {
+  font-weight: 600;
+  color: #2d2f48;
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.card-icon {
+  color: #007bff; /* Consistent icon color */
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d2f48;
+  margin-bottom: 10px;
+}
+
+.card p,
+.card a {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.card a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Form Styling */
+label {
+  font-weight: 500;
+  color: #2d2f48;
+}
+
+.form-control {
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.form-control::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+button {
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

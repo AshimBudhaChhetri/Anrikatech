@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Federo&display=swap");
+
+.navbar {
+  height: 100px;
+}
+.logo {
+  height: auto;
+  max-height: 80px; /* Adjust logo height */
+  max-width: 100px; /* Adjust logo width */
+}
+
+.company-name {
+  font-size: 1.25rem; /* Adjust font size */
+  font-weight: bold; /* Bold text for company name */
+  background: linear-gradient(
+    135deg,
+    #b8860b,
+    #e3a617
+  ); /* Gradient background */
+  -webkit-background-clip: text; /* Clip background to text */
+  -webkit-text-fill-color: transparent; /* Make text fill transparent to show the gradient */
+  font-size: 19px;
+  font-family: "Federo", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+
+.navbar {
+  padding: 1rem 0;
+}
+
+.nav-link {
+  margin-right: 25px;
+  color: #333;
+  font-family: "Federo", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.nav-link:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.btn-primary-nav {
+  background: linear-gradient(135deg, #b8860b, #e3a617);
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: white; /* Text color for contrast */
+  transition: background 0.5s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.btn-primary-nav:hover {
+  background: linear-gradient(
+    135deg,
+    #b8860b,
+    #e3a617
+  ); /* Lighter gradient on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  color: white; /* Ensure text remains readable */
+}
