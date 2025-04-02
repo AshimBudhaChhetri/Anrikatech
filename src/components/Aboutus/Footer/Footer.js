@@ -57,7 +57,7 @@ const Footer = () => {
             <h5 className="text-uppercase">Work Enquiries</h5>
             <p>
               <a href="mailto:anrikaa777@gmail.com" className="text-white">
-                anrikaa777@gmail.com
+                contact@anrikatech.com
               </a>
             </p>
             <p className="my-0">+977 9851024256</p>
