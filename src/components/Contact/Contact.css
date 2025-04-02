@@ -1,84 +1,124 @@
-/* General Styling */
-
-.contact-container {
-  font-family: "Poppins", sans-serif;
-  background-color: #f9fafb;
+.contact-section-wrapper {
+  font-family: "Outfit", sans-serif;
+  background-color: #fdfdfd;
+  color: #2d2f48;
+  overflow: hidden;
 }
 
-.sub-text-contact {
+.contact-subtitle {
+  color: rgb(40, 83, 214);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.contact-subtitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 30px;
+  background-color: rgb(40, 83, 214);
+  transition: width 0.3s ease;
+}
+
+.contact-subtitle:hover::after {
+  width: 100%;
+}
+
+.contact-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: black !important;
+}
+
+.contact-desc {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.contact-details span {
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-details svg {
   color: #b8860b;
 }
 
-h1 {
-  font-weight: 600;
-  color: #2d2f48;
+.contact-details .d-flex {
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-/* Card Styling */
-.card {
-  border: none;
-  border-radius: 10px;
+.contact-form-wrapper {
   background-color: #ffffff;
+
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.card-icon {
-  color: #007bff; /* Consistent icon color */
-}
-
-.card-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: #2d2f48;
-  margin-bottom: 10px;
-}
-
-.card p,
-.card a {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
-}
-
-.card a {
-  text-decoration: none;
-  color: #007bff;
-}
-
-.card a:hover {
-  text-decoration: underline;
-}
-
-/* Form Styling */
-label {
-  font-weight: 500;
-  color: #2d2f48;
-}
-
-.form-control {
-  font-size: 16px;
-  color: #333;
+.contact-form-wrapper input,
+.contact-form-wrapper select,
+.contact-form-wrapper textarea {
+  font-size: 15px;
+  padding: 12px 16px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 12px;
+  color: #333;
 }
 
-.form-control::placeholder {
+.contact-form-wrapper input::placeholder,
+.contact-form-wrapper textarea::placeholder {
   color: #aaa;
   font-style: italic;
 }
 
-button {
-  font-weight: 600;
-  font-size: 18px;
-  color: #fff;
-  background-color: #007bff;
+.contact-submit-btn {
+  background: rgb(40, 83, 214) !important;
   border: none;
-  border-radius: 8px;
-  padding: 12px;
-  transition: background-color 0.3s ease;
+  color: #fff;
+  padding: 0.4rem 1.8rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  width: max-content !important;
 }
 
-button:hover {
-  background-color: #0056b3;
+.contact-submit-btn:hover {
+  opacity: 0.9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+.Toastify__toast--success {
+  background: rgb(40, 83, 214) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  font-family: "Outfit", sans-serif !important;
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(135deg, rgb(40, 83, 214), #dc3545) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  font-family: "Outfit", sans-serif !important;
+}
+
+.Toastify__progress-bar--success {
+  background: white !important;
+}
+
+.Toastify__close-button {
+  color: white !important;
 }

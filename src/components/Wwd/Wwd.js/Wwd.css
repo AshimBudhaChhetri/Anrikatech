@@ -2,19 +2,23 @@
 .what-we-do-section {
   padding: 3rem 0;
 
-  background-color: #f9f9f9; /* Fallback color in case the image doesn't load */
   background-image: url("../../../media/pic3.png"); /* Replace with your background image path */
   background-size: cover; /* Ensures the image covers the entire section */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-position: center;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+  overflow: hidden;
 }
 
 /* Subtitle */
 .sub-title {
   font-size: 1.2rem;
-  color: #b8860b; /* Golden-brown color */
+  color: rgb(40, 83, 214);
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 /* Main Title */
@@ -26,40 +30,86 @@
 }
 
 /* Card Styles */
-.card {
+/* Card Styles Specific to Wwd */
+.card-a-container {
   border: none;
-  background-color: white;
-  transition: transform 0.3s, box-shadow 0.3s;
-  border-radius: 10px;
-  text-align: center; /* Center align card content */
+  background-color: transparent;
+  border-radius: 12px;
+  text-align: center;
   padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  margin: 30px;
 }
 
-.card:hover {
-  transform: translateY(-10px);
+.card-a-container:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.card-img-top {
-  width: 250px; /* Smaller image size */
+.card-a-img {
+  width: 250px;
   height: auto;
-  margin: 0 auto; /* Center the image */
-  display: block; /* Ensure the image is treated as a block element */
+  margin: 0 auto;
+  display: block;
   border-radius: 10px;
 }
 
-.card-body {
+.card-a-body {
   padding: 1rem 1.5rem;
 }
 
-.card-title {
+.card-a-title {
   font-size: 1.55rem;
   font-weight: bold;
   color: #333;
   margin-bottom: 1rem;
 }
 
-.card-text {
+.card-a-text {
   font-size: 1rem;
   color: #555;
+}
+
+.wwd-carousel .card {
+  transition: transform 0.3s ease;
+  border: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  margin: 10px;
+}
+
+/* Custom arrow styles */
+.wwd-carousel .react-multiple-carousel__arrow {
+  background-color: rgba(
+    40,
+    83,
+    214,
+    0.9
+  ); /* Change this to your preferred color */
+  color: white;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wwd-carousel .react-multiple-carousel__arrow:hover {
+  background-color: rgb(
+    40,
+    83,
+    214
+  ); /* Slightly darker or more vivid on hover */
+}
+
+/* Optional: Adjust arrow size or position */
+.wwd-carousel .react-multiple-carousel__arrow--left,
+.wwd-carousel .react-multiple-carousel__arrow--right {
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.wwd-carousel .react-multiple-carousel__arrow--left {
+  left: 0px; /* Adjust this to how far out you want */
+}
+
+.wwd-carousel .react-multiple-carousel__arrow--right {
+  right: 0px; /* Adjust this to how far out you want */
 }

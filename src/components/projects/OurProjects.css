@@ -1,21 +1,49 @@
-/* Section Styles */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
 .our-projects-section {
   padding: 4rem 0;
   background-color: #f9f9f9;
+  background-image: url("https://muffle.droitlab.com/wp-content/uploads/2023/01/project.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* Optional: parallax-style effect */
+  color: #fff; /* Assuming light text over image */
+  position: relative;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  overflow: hidden;
+  font-style: normal;
 }
 
 .subtext-projects {
-  font-size: 1.2rem;
-  color: #b8860b;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-size: 1.25rem;
+  color: rgb(40, 83, 214);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  padding-left: 12px;
+}
+
+.subtext-projects::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 18px;
+  width: 4px;
+  background-color: rgb(40, 83, 214);
+  border-radius: 2px;
 }
 
 .main-title-projects {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #333;
+  color: white;
   margin-bottom: 2rem;
 }
 
@@ -23,6 +51,9 @@
 .project-card-wrapper {
   margin-bottom: 1.5rem;
 }
+/* .project-intro-text {
+  color: ;
+} */
 
 .project-card {
   position: relative;
@@ -73,5 +104,35 @@
 .project-description {
   font-size: 1rem;
   color: #ddd;
+  text-align: center;
+}
+
+.additional-projects-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+}
+
+.project-overlay.show-always {
+  opacity: 1 !important;
+  background-color: transparent;
+  text-align: center;
+}
+
+.additional-projects-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+}
+
+.project-overlay.show-always {
+  opacity: 1 !important;
+  background-color: transparent;
   text-align: center;
 }

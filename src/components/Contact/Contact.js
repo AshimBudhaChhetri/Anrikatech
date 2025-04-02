@@ -1,144 +1,236 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+// Contact.js
+import React, { useState } from "react";
+import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
+import { motion } from "framer-motion";
 import "./Contact.css";
-// Import Font Awesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPhone,
-  faMapMarkerAlt,
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    budget: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_oxpfi6f", // ✅ Replace with your EmailJS service ID
+        "template_2tpm8ej", // ✅ Replace with your template ID
+        formData,
+        "2Iy3W0B96qjbM94P6" // ✅ Replace with your public key
+      )
+      .then(
+        () => {
+          toast.success("Message sent successfully!", {
+            position: "top-right",
+            autoClose: 4000,
+            theme: "colored",
+          });
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            service: "",
+            budget: "",
+            message: "",
+          });
+        },
+        (error) => {
+          toast.error("❌ Failed to send message. Please try again.", {
+            position: "top-right",
+            autoClose: 5000,
+            theme: "colored",
+          });
+          console.error(error.text);
+        }
+      );
+  };
+
   return (
-    <div className="container py-5 contact-container">
-      <p className="text-center text-muted mb-2 sub-text-contact">
-        Have queries or need assistance? We're here to help you!
-      </p>
-      <h1 className="text-center mb-5">Have some questions?</h1>
-      <div className="row gx-5 align-items-stretch">
-        {/* Left Section: Cards */}
-        <div className="col-lg-6 d-flex">
-          <div className="w-100">
-            {/* Phone Numbers Card */}
-            <div className="card mb-4 shadow-sm text-center">
-              <div className="card-body">
-                <FontAwesomeIcon
-                  icon={faPhone}
-                  className="card-icon mb-3"
-                  size="3x"
-                />
-                <h5 className="card-title">Phone Numbers</h5>
-                <p>
-                  Office: +1 234 567 890
-                  <br />
-                  Support: +1 987 654 321
-                  <br />
-                  Sales: +1 555 555 555
-                </p>
-              </div>
-            </div>
-            {/* Location Card */}
-            <div className="card mb-4 shadow-sm text-center">
-              <div className="card-body">
-                <FontAwesomeIcon
-                  icon={faMapMarkerAlt}
-                  className="card-icon mb-3"
-                  size="3x"
-                />
-                <h5 className="card-title">Location</h5>
-                <p>
-                  123 Business Street, <br />
-                  New York, NY 10001, <br />
-                  United States
-                </p>
-              </div>
-            </div>
-            {/* Email Card */}
-            <div className="card mb-4 shadow-sm text-center">
-              <div className="card-body">
-                <FontAwesomeIcon
-                  icon={faEnvelope}
-                  className="card-icon mb-3"
-                  size="3x"
-                />
-                <h5 className="card-title">Email</h5>
-                <p>
-                  <a href="mailto:support@example.com">support@example.com</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section className="contact-section-wrapper py-5" id="contact">
+      <div className="contact-container container">
+        <div className="contact-row row align-items-center">
+          {/* Left Content */}
+          <motion.div
+            className="contact-left col-lg-6 mb-5 mb-lg-0"
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <motion.p
+              className="contact-subtitle"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              Contact Us
+            </motion.p>
 
-        {/* Right Section: Contact Form */}
-        <div className="col-lg-6 d-flex">
-          <div className="w-100">
-            <div className="p-4 shadow rounded bg-white">
-              <form>
-                <div className="mb-3">
-                  <label htmlFor="name" className="form-label">
-                    Your Name
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="name"
-                    placeholder="Enter your name"
-                    required
-                  />
+            <motion.h2
+              className="contact-title mb-3"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.9 }}
+              viewport={{ once: true }}
+            >
+              Looking for a Reliable Tech Partner?
+            </motion.h2>
+
+            <motion.p
+              className="contact-desc mb-4"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 1 }}
+              viewport={{ once: true }}
+            >
+              We build custom websites, mobile apps, and digital platforms that
+              help your business grow. Let’s turn your ideas into
+              high-performing digital solutions.
+            </motion.p>
+
+            <motion.div
+              className="contact-details mt-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.9 }}
+              viewport={{ once: true }}
+            >
+              <div className="contact-phones d-flex align-items-center mb-3 flex-wrap">
+                <FaPhoneAlt className="me-2 text-dark fs-5" />
+                <span className="fw-semibold me-4">+977 9851024256</span>
+                <span className="fw-semibold me-4">+977 9823617508</span>
+                <span className="fw-semibold">+977 9869085531</span>
+              </div>
+              <div className="contact-address d-flex align-items-center mb-3">
+                <FaMapMarkerAlt className="me-2 text-dark fs-5" />
+                <span className="fw-semibold">Kusunti, Lalitpur, Nepal</span>
+              </div>
+              <div className="contact-email d-flex align-items-center">
+                <FaEnvelope className="me-2 text-dark fs-5" />
+                <span className="fw-semibold">anrikaa777@gmail.com</span>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Right Form */}
+          <motion.div
+            className="contact-right col-lg-6"
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <motion.div
+              className="contact-form-wrapper p-4 rounded bg-white shadow-sm"
+              initial={{ scale: 0.95, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <form onSubmit={handleSubmit}>
+                <div className="row g-3 mb-3">
+                  <div className="col-md-6">
+                    <label htmlFor="name" className="form-label">
+                      Your Name
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="form-control"
+                      id="name"
+                      placeholder="Enter your name"
+                      required
+                    />
+                  </div>
+                  <div className="col-md-6">
+                    <label htmlFor="email" className="form-label">
+                      Your Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="form-control"
+                      id="email"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
                 </div>
 
-                <div className="mb-3">
-                  <label htmlFor="email" className="form-label">
-                    Your Email
-                  </label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="email"
-                    placeholder="Enter your email"
-                    required
-                  />
-                </div>
-
-                <div className="mb-3">
-                  <label htmlFor="phone" className="form-label">
-                    Your Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    className="form-control"
-                    id="phone"
-                    placeholder="Enter your phone number"
-                    required
-                  />
-                </div>
-
-                <div className="mb-3">
-                  <label htmlFor="services" className="form-label">
-                    Services You're Interested In
-                  </label>
-                  <select className="form-select" id="services" required>
-                    <option value="">Select a service</option>
-                    <option value="web-development">Web Development</option>
-                    <option value="mobile-app-development">
-                      Mobile App Development
-                    </option>
-                    <option value="seo">SEO Optimization</option>
-                    <option value="digital-marketing">Digital Marketing</option>
-                  </select>
+                <div className="row g-3 mb-3">
+                  <div className="col-md-6">
+                    <label htmlFor="phone" className="form-label">
+                      Your Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="form-control"
+                      id="phone"
+                      placeholder="Enter your phone number"
+                      required
+                    />
+                  </div>
+                  <div className="col-md-6">
+                    <label htmlFor="service" className="form-label">
+                      Services You're Interested In
+                    </label>
+                    <select
+                      className="form-select"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      required
+                    >
+                      <option value="">Select a service</option>
+                      <option value="web-development">Web Development</option>
+                      <option value="mobile-app-development">
+                        Mobile App Development
+                      </option>
+                      <option value="ui-ux-design">UI/UX Design</option>
+                      <option value="seo">SEO</option>
+                      <option value="digital-marketing">
+                        Digital Marketing
+                      </option>
+                      <option value="data-analytics">Data Analytics</option>
+                      <option value="website-redesign">Website Redesign</option>
+                      <option value="others">Others</option>
+                    </select>
+                  </div>
                 </div>
 
                 <div className="mb-3">
                   <label htmlFor="budget" className="form-label">
-                    Estimated Budget
+                    Estimated Budget (Optional)
                   </label>
                   <input
                     type="number"
+                    name="budget"
+                    value={formData.budget}
+                    onChange={handleChange}
                     className="form-control"
                     id="budget"
-                    placeholder="Enter your budget in USD"
+                    placeholder="E.g. Rs 50000"
                   />
                 </div>
 
@@ -147,22 +239,30 @@ const Contact = () => {
                     Additional Information or Message
                   </label>
                   <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     className="form-control"
                     id="message"
                     rows="5"
                     placeholder="Type your message here"
+                    required
                   ></textarea>
                 </div>
 
-                <button type="submit" className="btn btn-primary w-100">
+                <button
+                  type="submit"
+                  className="contact-submit-btn btn btn-warning w-100 mt-2 fw-semibold"
+                >
                   Submit
                 </button>
               </form>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-    </div>
+      <ToastContainer />
+    </section>
   );
 };
 

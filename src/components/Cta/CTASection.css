@@ -1,0 +1,115 @@
+/* CTAInquiry.css */
+.cta-inquiry-section {
+  background-color: #31447e;
+  color: #1a1a1a;
+  position: relative;
+  overflow: hidden;
+  background-image: url("https://muffle.droitlab.com/wp-content/uploads/2022/12/bg.webp");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.cta-inquiry-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(255, 186, 0, 0.8); /* Warm gold accent */
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.inquiry-img {
+  max-width: 100%;
+  height: 400px;
+  position: relative;
+  z-index: 2;
+}
+
+.satisfaction-box {
+  display: inline-block;
+  background: #ffffff;
+  color: #111111;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  margin-top: -40px;
+  position: relative;
+  z-index: 3;
+}
+
+.satisfaction-box .rate {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-right: 10px;
+  color: rgb(43, 74, 167);
+}
+
+.satisfaction-box .text {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.inquiry-label {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.7); /* Light label on dark background */
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.inquiry-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff !important; /* Bright title for contrast */
+  line-height: 1.2;
+}
+
+.inquiry-description {
+  color: #f5f5f5; /* Soft white for readability */
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.inquiry-btn {
+  background-color: #001f6e; /* Darker shade of royal blue */
+  color: #ffffff;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+}
+
+.inquiry-btn:hover {
+  background-color: #ffffff;
+  color: rgb(40, 83, 214);
+  border: 1px solid rgb(40, 83, 214);
+}
+
+@media (max-width: 500px) {
+  .inquiry-img {
+    max-width: 60%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .satisfaction-box {
+    display: inline-block;
+    background: #ffffff;
+    color: #111111;
+    padding: 9px 17px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    margin-top: -40px;
+    position: relative;
+    z-index: 3;
+  }
+}

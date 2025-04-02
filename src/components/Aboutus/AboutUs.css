@@ -1,17 +1,31 @@
 /* Section Styles */
 .about-us-section {
   padding: 4rem 0;
-  background-color: #fef8f8; /* Light pink background */
+
+  background-image: url("../../media/pic2.png");
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+  overflow: hidden;
 }
 
 /* Section Title (About Us Text) */
 .section-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem !important; /* Slightly larger for emphasis */
   font-weight: bold;
-  color: #b8860b; /* Golden-brown color */
-  margin-bottom: 0.2rem;
-  text-transform: uppercase;
+  color: rgb(40, 83, 214);
+  margin-bottom: 0.5rem;
   letter-spacing: 1px;
+
+  border-left: 4px solid rgb(40, 83, 214); /* Adds a left border for a modern look */
+  padding-left: 0.75rem;
+
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Right Side: Content */
@@ -76,4 +90,121 @@
 .about-image {
   height: 450px;
   width: 800px;
+}
+
+.stats-about {
+  margin-top: 2.5rem;
+}
+
+.stat-box {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(40, 83, 214);
+  margin-bottom: 0.3rem;
+}
+
+.stat-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.stat-desc {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+  display: none;
+}
+
+.about-image {
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box {
+  margin-top: 20px;
+  padding: 15px;
+}
+
+@media only screen and (max-width: 490px) {
+  .about-image {
+    border-radius: 20px;
+  }
+
+  .left-box {
+  }
+
+  .about-image {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .section-title {
+    font-size: 1.2rem !important;
+    font-weight: bold;
+
+    margin-bottom: 0.2rem;
+
+    letter-spacing: 1px;
+  }
+
+  /* Right Side: Content */
+  .main-heading-about {
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.8rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+  .stats-about {
+    margin-top: 2.5rem;
+  }
+
+  .stat-box {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+
+    margin-bottom: 0.3rem;
+  }
+
+  .stat-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-desc {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    display: none;
+  }
+
+  .about-image {
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .stat-box {
+    margin-top: 20px;
+    padding: 5px;
+  }
 }

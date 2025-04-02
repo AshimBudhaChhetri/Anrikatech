@@ -1,0 +1,166 @@
+/* Section Wrapper */
+.process-section {
+  padding: 5rem 1rem;
+  background-color: #f9f9f9;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  width: 100%;
+  font-style: normal;
+}
+
+/* Titles */
+.section-title-working {
+  font-size: 2.9rem;
+  font-weight: bold;
+  color: #222;
+  padding-bottom: 40px;
+}
+
+.process-subtitle-working {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(40, 83, 214);
+  margin-bottom: 0.5rem;
+}
+
+.step-counter-box {
+  position: sticky;
+  top: 55%;
+
+  width: 140px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.step-counter-wrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.progress-ring {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 140px;
+  height: 140px;
+  z-index: -1;
+}
+.step-counter-box {
+  width: 240px;
+  height: 240px;
+}
+
+.step-counter-wrapper {
+  width: 240px;
+  height: 240px;
+}
+
+.progress-ring {
+  width: 240px;
+  height: 240px;
+}
+
+.ring-progress {
+  stroke-linecap: round;
+  stroke-dasharray: 716.28;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+.step-label {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #777;
+}
+
+.step-progress {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(40, 83, 214);
+}
+
+/* Step Section */
+.step-section {
+  height: max-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  position: relative;
+}
+
+/* Show/Hide Logic */
+.step-visible {
+  opacity: 1;
+  z-index: 2;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.step-hidden {
+  opacity: 0.2;
+  transform: scale(0.97);
+  pointer-events: none;
+}
+
+/* Step Content */
+.step-title {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.step-desc {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.step-points {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.step-points li {
+  font-weight: 500;
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Ring Container */
+
+.ring {
+  transform: rotate(-90deg);
+}
+
+.ring-bg {
+  stroke-linecap: round;
+}
+
+.ring-progress {
+  stroke-linecap: round;
+  stroke-dasharray: 339.292;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+.step-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+}
