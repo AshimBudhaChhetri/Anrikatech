@@ -1,6 +1,6 @@
 /* Section Styles */
 .what-we-do-section {
-  padding: 3rem 0;
+  padding: 6rem 0;
 
   background-image: url("../../../media/pic3.png"); /* Replace with your background image path */
   background-size: cover; /* Ensures the image covers the entire section */

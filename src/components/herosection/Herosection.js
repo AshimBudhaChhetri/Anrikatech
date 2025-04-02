@@ -14,7 +14,7 @@ const Herosection = () => {
         <div className="row align-items-center">
           {/* Left Side Content */}
           <motion.div
-            className="col-lg-6 col-md-12 text-left"
+            className="col-lg-6 col-md-12 text-left hero-content-div"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
