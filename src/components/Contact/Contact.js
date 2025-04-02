@@ -26,7 +26,7 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_ixs6ixi", // ✅ Replace with your EmailJS service ID
+        "service_oxpfi6f", // ✅ Replace with your EmailJS service ID
         "template_2tpm8ej", // ✅ Replace with your template ID
         formData,
         "2Iy3W0B96qjbM94P6" // ✅ Replace with your public key
@@ -121,7 +121,7 @@ const Contact = () => {
               </div>
               <div className="contact-email d-flex align-items-center">
                 <FaEnvelope className="me-2 text-dark fs-5" />
-                <span className="fw-semibold">anrikaa777@gmail.com</span>
+                <span className="fw-semibold">contact@anrikatech.com</span>
               </div>
             </motion.div>
           </motion.div>

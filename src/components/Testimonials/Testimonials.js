@@ -39,9 +39,10 @@ const Testimonials = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 2,
-
     slidesToScroll: 1,
     draggable: true,
+    autoplay: true, // Enables autoplay
+    autoplaySpeed: 3000, // Time in ms between each slide (3000ms = 3s)
     responsive: [
       {
         breakpoint: 768,
