@@ -34,7 +34,7 @@ const App = () => {
   return (
     <div className="main-outer-div">
       <Helmet>
-        <title>AnrikaTech | Custom Software Development Company</title>
+        <title>AnrikaTech Pvt Ltd</title>
         <meta
           name="description"
           content="AnrikaTech offers end-to-end software services including custom websites, mobile apps, and backend solutions."
