@@ -98,7 +98,6 @@ const App = () => {
         </script>
       </Helmet>
 
-      <Navbar />
       <Herosection />
       <Wwd />
       <AboutUs />

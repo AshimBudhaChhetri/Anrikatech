@@ -24,12 +24,18 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Prevent bot (like react-snap) from firing emails
+    const isBot =
+      navigator.userAgent.includes("Chrome-Lighthouse") ||
+      navigator.userAgent.includes("HeadlessChrome");
+    if (isBot) return;
+
     emailjs
       .send(
-        "service_oxpfi6f", // ✅ Replace with your EmailJS service ID
-        "template_2tpm8ej", // ✅ Replace with your template ID
+        "service_oxpfi6f", // ✅ Your EmailJS service ID
+        "template_2tpm8ej", // ✅ Your EmailJS template ID
         formData,
-        "2Iy3W0B96qjbM94P6" // ✅ Replace with your public key
+        "2Iy3W0B96qjbM94P6" // ✅ Your EmailJS public key
       )
       .then(
         () => {
@@ -48,12 +54,12 @@ const Contact = () => {
           });
         },
         (error) => {
+          console.error(error && error.text ? error.text : "Unknown error"); // ✅ Safe for react-snap
           toast.error("❌ Failed to send message. Please try again.", {
             position: "top-right",
             autoClose: 5000,
             theme: "colored",
           });
-          console.error(error.text);
         }
       );
   };
@@ -79,7 +85,6 @@ const Contact = () => {
             >
               Contact Us
             </motion.p>
-
             <motion.h2
               className="contact-title mb-3"
               initial={{ opacity: 0, y: 30 }}
@@ -89,7 +94,6 @@ const Contact = () => {
             >
               Looking for a Reliable Tech Partner?
             </motion.h2>
-
             <motion.p
               className="contact-desc mb-4"
               initial={{ opacity: 0 }}
@@ -101,7 +105,6 @@ const Contact = () => {
               help your business grow. Let’s turn your ideas into
               high-performing digital solutions.
             </motion.p>
-
             <motion.div
               className="contact-details mt-4"
               initial={{ opacity: 0, y: 20 }}

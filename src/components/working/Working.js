@@ -52,8 +52,11 @@ const Working = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const offsets = sectionRefs.current.map((ref) => {
-        if (!ref) return Number.POSITIVE_INFINITY;
+      const validRefs = sectionRefs.current.filter(Boolean); // ✅ Prevent undefined refs
+
+      if (validRefs.length === 0) return;
+
+      const offsets = validRefs.map((ref) => {
         const rect = ref.getBoundingClientRect();
         return Math.abs(rect.top - window.innerHeight / 2);
       });
@@ -63,7 +66,7 @@ const Working = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll();
+    handleScroll(); // Initial call
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -142,11 +145,12 @@ const Working = () => {
                 className={`step-section ${
                   currentStep === index ? "step-visible" : "step-hidden"
                 }`}
-                ref={(el) => (sectionRefs.current[index] = el)}
+                ref={(el) => {
+                  sectionRefs.current[index] = el;
+                }}
               >
                 <div className="step-stack-item">
                   <img src={step.icon} alt={step.title} className="step-icon" />
-
                   <h3 className="step-title">{step.title}</h3>
                   <p className="step-desc">{step.description}</p>
                   <ul className="step-points">
