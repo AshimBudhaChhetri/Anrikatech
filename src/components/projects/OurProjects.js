@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import "./OurProjects.css";
 import { motion } from "framer-motion";
 
-// Import your project images
+// Import project images
 import projectImg1 from "../../media/project1.png";
 import projectImg2 from "../../media/project2.png";
 import projectImg3 from "../../media/project3.png";
@@ -16,9 +17,7 @@ import projectImg9 from "../../media/project9.png";
 const OurProjects = () => {
   const [showAll, setShowAll] = useState(false);
 
-  const handleToggle = () => {
-    setShowAll(!showAll);
-  };
+  const handleToggle = () => setShowAll(!showAll);
 
   const projects = [
     {
@@ -85,22 +84,47 @@ const OurProjects = () => {
       image: projectImg4,
       url: "https://aron-engineering.com",
     },
-    // {
-    //   id: 9,
-    //   name: "Meditation Healing Bowl",
-    //   description:
-    //     "Products designed to promote relaxation, mindfulness, and well-being.",
-    //   image: projectImg3,
-    //   url: "https://meditationhealingbowl.com",
-    // },
   ];
 
   const visibleProjects = showAll ? projects : projects.slice(0, 6);
 
   return (
     <section className="our-projects-section" id="projects">
+      <Helmet>
+        <meta
+          name="description"
+          content="Browse our portfolio of web development, software, branding, and mobile app projects delivered across Nepal, USA, and beyond. Discover our work with engineering firms, legal companies, and travel agencies."
+        />
+        <meta
+          name="keywords"
+          content="IT project portfolio, software development projects, web development Nepal, mobile app case studies, client work Anrika"
+        />
+        <link rel="canonical" href="https://www.anrikatech.com/#projects" />
+
+        {/* ✅ JSON-LD structured data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Our Projects Portfolio",
+            url: "https://www.anrikatech.com/#projects",
+            numberOfItems: projects.length,
+            itemListElement: projects.map((project, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              name: project.name,
+              url: project.url,
+            })),
+          })}
+        </script>
+      </Helmet>
+
       <div className="container text-left">
-        {/* Section Title */}
+        {/* ✅ H1 for SEO */}
+        <h1 className="visually-hidden">
+          Our Projects - Web & Software Solutions
+        </h1>
+
         <motion.div
           className="row mb-4"
           initial={{ opacity: 0, y: 40 }}
@@ -116,7 +140,7 @@ const OurProjects = () => {
           </div>
 
           {visibleProjects.slice(0, 2).map((project, index) => (
-            <motion.div
+            <motion.article
               className="col-lg-4 col-md-6 mb-4"
               key={project.id}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -142,14 +166,13 @@ const OurProjects = () => {
                   <p className="project-description">{project.description}</p>
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </motion.div>
 
-        {/* Other Projects */}
         <div className="row">
           {visibleProjects.slice(2).map((project, index) => (
-            <motion.div
+            <motion.article
               className="col-lg-3 col-md-6 col-sm-12 mb-4"
               key={project.id}
               initial={{ opacity: 0, y: 40 }}
@@ -175,12 +198,11 @@ const OurProjects = () => {
                   <p className="project-description">{project.description}</p>
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
 
-          {/* Additional Projects Box - Show only if showAll is true */}
           {showAll && (
-            <motion.div
+            <motion.article
               className="col-lg-3 col-md-6 col-sm-12 mb-4"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -199,11 +221,10 @@ const OurProjects = () => {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
           )}
         </div>
 
-        {/* View More Button */}
         {!showAll && projects.length > 6 && (
           <motion.div
             className="text-center mt-4"

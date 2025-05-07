@@ -6,6 +6,7 @@ import "./Contact.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "emailjs-com";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -66,6 +67,45 @@ const Contact = () => {
 
   return (
     <section className="contact-section-wrapper py-5" id="contact">
+      <Helmet>
+        <meta
+          name="description"
+          content="Reach out to us for software solutions, mobile app development, SEO, branding, and more. Let's build something great together."
+        />
+        <meta
+          name="keywords"
+          content="contact Anrika Tech, web development Nepal, software consultation, tech support Nepal"
+        />
+        <link rel="canonical" href="https://www.anrikatech.com/#contact" />
+        <script type="application/ld+json">
+          {`
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact",
+        "url": "https://www.anrikatech.com/#contact",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Anrika Tech",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+9779851024256",
+            "contactType": "customer support",
+            "areaServed": "NP",
+            "availableLanguage": ["English", "Nepali"]
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Kusunti",
+            "addressLocality": "Lalitpur",
+            "addressCountry": "NP"
+          }
+        }
+      }
+    `}
+        </script>
+      </Helmet>
+
       <div className="contact-container container">
         <div className="contact-row row align-items-center">
           {/* Left Content */}

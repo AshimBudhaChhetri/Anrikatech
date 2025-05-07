@@ -2,20 +2,51 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <!-- Recommended Favicons -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- SEO Meta -->
+    <meta
+      name="description"
+      content="Trusted IT company in Nepal offering web development, custom software solutions, digital marketing, and scalable tech services for modern businesses."
+    />
+    <title>Anrika Tech</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Anrika Tech" />
+    <meta
+      property="og:description"
+      content="Providing expert services in website development, custom software, mobile apps, and digital marketing for businesses in Nepal and beyond."
+    />
+    <meta property="og:url" content="https://anrikatech.com.np" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://anrikatech.com.np/favicon-96x96.png"
+    />
+    <meta property="og:site_name" content="Anrika Tech" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Anrika Tech",
+        "url": "https://anrikatech.com.np",
+        "logo": "https://anrikatech.com.np/favicon-96x96.png",
+        "sameAs": [
+          "https://www.facebook.com/AnrikaTech",
+          "https://www.instagram.com/anrikatech"
+        ]
+      }
+    </script>
+
+    <!-- Favicons -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="AnrikaTech's official website – offering modern web and software development services tailored to your business needs."
-    />
-    <title>Anrika Tech</title>
 
     <!-- Preloader CSS -->
     <style>
@@ -48,15 +79,14 @@
       }
     </style>
   </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
 
-    <!-- 🔻 Preloader (will be removed after app loads) -->
+  <body>
+    <!-- ✅ React root mount point -->
+    <div id="root"></div>
+
+    <!-- 🔄 Preloader -->
     <div id="preloader">
       <img src="%PUBLIC_URL%/anrikalogo2.svg" alt="Loading..." />
     </div>
-
-    <!-- React app root -->
-    <div id="root"></div>
   </body>
 </html>

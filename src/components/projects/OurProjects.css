@@ -7,8 +7,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed; /* Optional: parallax-style effect */
-  color: #fff; /* Assuming light text over image */
+  background-attachment: fixed;
+  color: #fff;
   position: relative;
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
@@ -47,13 +47,9 @@
   margin-bottom: 2rem;
 }
 
-/* Project Card Styles */
 .project-card-wrapper {
   margin-bottom: 1.5rem;
 }
-/* .project-intro-text {
-  color: ;
-} */
 
 .project-card {
   position: relative;
@@ -107,6 +103,7 @@
   text-align: center;
 }
 
+/* 🎯 Additional Projects Box */
 .additional-projects-box {
   display: flex;
   justify-content: center;
@@ -122,17 +119,15 @@
   text-align: center;
 }
 
-.additional-projects-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px dashed rgba(255, 255, 255, 0.3);
-}
-
-.project-overlay.show-always {
-  opacity: 1 !important;
-  background-color: transparent;
-  text-align: center;
+/* ✅ New: Visually Hidden (for SEO + accessibility H1) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
