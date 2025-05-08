@@ -114,7 +114,7 @@ const Contact = () => {
             >
               <div className="contact-phones d-flex align-items-center mb-3 flex-wrap">
                 <FaPhoneAlt className="me-2 text-dark fs-5" />
-                <span className="fw-semibold me-4">+977 9851024256</span>
+                {/* <span className="fw-semibold me-4">+977 9851024256</span> */}
                 <span className="fw-semibold me-4">+977 9823617508</span>
                 <span className="fw-semibold">+977 9869085531</span>
               </div>

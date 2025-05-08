@@ -60,7 +60,7 @@ const Footer = () => {
                 contact@anrikatech.com
               </a>
             </p>
-            <p className="my-0">+977 9851024256</p>
+            <p className="my-0">+977 9823617508</p>
           </div>
         </div>
 
